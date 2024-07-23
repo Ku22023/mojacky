@@ -78,6 +78,7 @@ def orders():
             print(f"\n --- Order Complete! --- \n")
             orders()
         if y == 3:
+            x = 0
             while x != -1:
                 if x != -1:
                     item = "error"
