@@ -80,29 +80,14 @@ def orders():
         if y == 3:
             x = 0
             while x != -1:
+                item = "error"
+                x = int(input("\nEnter the place of the item you want to remove, from the order list. Type -1 when you are finished: "))
+                print(x)
                 if x != -1:
-                    item = "error"
-                    x = int(input("\nEnter the place of the item you want to remove, from the order list. Type -1 when you are finished: "))
-                    print(type(x))
-                    if x != -1:
-                        for i in order:
-                            if i == 1:
-                                item = "Mo's Special"
-                            if i == 2:
-                                item = "Peperroni Pizza"
-                            if i == 3:
-                                item = "Cheese Pizza"
-                            if i == 4:
-                                item = "Skibidi Slicers"
-                            if i == 5:
-                                item = "Meat Lovers"
-                            if i == 6:
-                                item = "Vegetarian"
-                                print(i)
-                        order.pop(x)
-                        print(f"Removed item number {x}. ({item})")
+                    x -= 1
+                    print(f"Removed item number {x} from the list.)")
+                    order.pop(x)
                 elif x == -1:
-                    print("bye bye ")
                     orders()
         if y == 4:
             start()
@@ -161,3 +146,4 @@ def start():
 print("Welcome to the Pizza Store")
 print("Please pick what you would like to do!")
 start()
+
